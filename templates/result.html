@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Result</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> 
+    
+</head>
+<body class="maincon">
+
+	<header>
+		<div class="jumbotron text-center">
+		<h1>Youtube Spam Comments Detection</h1>
+		<p class="text-muted font-weight-bold"> Semester End Term Project </p>
+		<p class="text-muted font-weight-bold">Gunik Maliwal - 19223032 </p>
+
+		</div>
+	</header>
+
+	<div class="container p-3 my-3 text-white" >
+		<div class="row">
+			<br>
+			{% if prediction == 1 %}
+			<p class=" text-center font-weight-bold text-white"  style="
+    margin-left: 324px; font-size:30px;" >It looks like a Spam Comment!</p>
+			{% else %}
+			<p class=" text-center font-weight-bold text-white "  style="
+    margin-left: 365px; font-size:30px;">Does not look like a Spam Comment!</p>
+			{% endif %}
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
